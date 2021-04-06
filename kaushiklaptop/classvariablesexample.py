@@ -56,9 +56,12 @@ class studentdetails:
     def from_slash(cls,string): #if any value is derived as a string then it initialize class value then the string value
      soma=string.split("/") # it will split the string by /
      return cls(soma[0],soma[1],soma[2]) # return the derived string values from the position value as a class then it will send the value to the student details function
-
+    @staticmethod
+    def printgood(string):
+        return f"This is good {string}\n"
 kaushik_dhar=studentdetails(20,1,"Soma Dhar")
 rahul_dutta=studentdetails(21,2,"Subhasis Dutta")
 ashish_paul=studentdetails(24,18,"Roma Paul")
 kamal_dhar=studentdetails.from_slash("42/19/Arati Dhar")
 print(kamal_dhar.print_details())
+print(studentdetails.printgood("programme"))
